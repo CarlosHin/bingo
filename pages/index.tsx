@@ -74,20 +74,21 @@ export default function Bingo() {
                         <Heading fontSize="30vw" textAlign="center">{lastNumber || "😃"}</Heading>
                         {!lastNumber && <Heading textAlign="center">EMPEZAMOOOOS!!!!!</Heading>}
                     </Stack>
-                    <Flex w="full" justifyContent="end"
-                    >
-                        <Stack direction="row" h="full" justify="center">
+                    <Flex w="full" justifyContent="end" >
+                        <Stack direction="row" h="full" w="full" justify="center">
                             {numbers.map(el => (
                                 <Stack direction="column" key="el">
                                     {numbers2.map(el2 => (
-                                        <ButtonNumber key="el2" number={el * 10 + el2} setLastNumber={selectNew} />
+                                        <ButtonNumber key={el2} number={el * 10 + el2} setLastNumber={selectNew} />
                                     ))}
                                 </Stack>
                             ))}
+                            <ButtonNumber number={90} setLastNumber={selectNew} />
                         </Stack>
                     </Flex>
+
                 </Flex>
-                <SimpleGrid columns={20} spacing={2} pt={10}>
+                <SimpleGrid columns={{ base: 10, md: 20 }} spacing={2} pt={10}>
                     {selectedNumber.map((el => (
                         <Flex
                             key={el}
