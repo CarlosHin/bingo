@@ -71,8 +71,8 @@ export default function Bingo() {
                     justifyContent="space-between"
                 >
                     <Stack mr={4} w="60vw">
-                        <Heading fontSize="30vw" textAlign="center">{lastNumber || "😃"}</Heading>
-                        {!lastNumber && <Heading textAlign="center">EMPEZAMOOOOS!!!!!</Heading>}
+                        <Heading fontSize="30vw" textAlign="center">{lastNumber !== undefined ? lastNumber : "😃"}</Heading>
+                        {lastNumber === undefined && <Heading textAlign="center">EMPEZAMOOOOS!!!!!</Heading>}
                     </Stack>
                     <Flex w="full" justifyContent="end" >
                         <Stack direction="row" h="full" w="full" justify="center">
