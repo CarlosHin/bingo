@@ -94,11 +94,13 @@ export default function Bingo() {
                             key={el}
                             align="center"
                             justify="center"
-                            border="1px black solid"
+                            border="2px white solid"
                             borderRadius={"50%"}
                             w="30px"
                             h="30px"
                             animation={spinAnimation}
+                            bg="white"
+                            color="black" fontWeight={800}
                         >
                             {el}
                         </Flex>
