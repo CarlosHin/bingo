@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
-import { Flex, Stack, Box, Input, Heading, Grid, GridItem, Button, keyframes, SimpleGrid } from '@chakra-ui/react'
+import { Flex, Stack, Box, Heading, Button, keyframes, SimpleGrid } from '@chakra-ui/react'
 
 
 const ButtonNumber = ({ number, setLastNumber }) => {
